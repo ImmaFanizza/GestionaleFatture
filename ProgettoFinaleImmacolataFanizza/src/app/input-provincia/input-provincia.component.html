@@ -1,0 +1,45 @@
+<form class="row g-3 align-middle">
+    <div class="col-12">
+        <h3>Inserisci nuova Provincia:</h3>
+    </div>
+    <div class="col-md-2"> </div>
+    <div class="col-md-6">
+        <label class="form-label">PROVINCIA</label>
+        <input type="text" name="nome" [(ngModel)]="provincia.nome" class="form-control">
+    </div>
+    <div class="col-md-2">
+        <label class="form-label">SIGLA</label>
+        <input type="text" name="sigla" [(ngModel)]="provincia.sigla" class="form-control">
+    </div>
+
+    <div class="col-md-4"> </div>
+    <div class="col-md-12 text-center my-3">
+        <button class="btn sfondo text-white w-25" type="button" (click)="aggiungi()">Aggiungi</button>
+    </div>
+
+
+
+    <div class="col-12 my-3">
+        <h3>Inserisci nuovo Comune:</h3>
+    </div>
+
+
+ <div class="col-md-2 form-group"></div>
+
+    <div class="col-md-4 form-group">
+        <p class="form-label">PROVINCIA </p>
+        <select class="form-select form-control" [(ngModel)]="comune.provincia" name="nomeComune" 
+            [ngModelOptions]="{standalone: true} ">
+            <option [ngValue]="item" *ngFor="let item of arrayProvince">{{item.nome}}</option>
+        </select>
+    </div>
+    <div class="col-md-4 form-group">
+        <label class="form-label">COMUNE</label>
+        <input [(ngModel)]="comune.nome" type="text" name="nomeComune" class="form-control my-2">
+    </div>
+    <div class="col-md-2 form-group"></div>
+    <div class="col-md-12 text-center my-1">
+        <button class="btn sfondo text-white w-25" type="button" (click)="aggiungiC()">Aggiungi</button>
+    </div>
+
+</form>

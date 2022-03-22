@@ -1,0 +1,47 @@
+<div class="card text-white sfondo mb-3 m-auto w-50">
+    <div class="card-header">
+        <h4>{{cliente.nomeContatto}}</h4>
+        <h4>{{cliente.cognomeContatto}}</h4>
+    </div>
+    <div class="card-body border-top">
+        <p class="card-title"><strong>Telefono Contatto : </strong> {{cliente.telefonoContatto}} </p>
+        <p class="card-text"><strong> Email Contatto :</strong>{{cliente.email}}</p>
+        <p class="card-text"><strong>Ragione Sociale: </strong> {{cliente.ragioneSociale}}</p>
+        <p class="card-text"><strong>Partita Iva :</strong> {{cliente.partitaIva}}</p>
+        <p class="card-text"><strong>Tipo Cliente: </strong>{{cliente.tipoCliente}}</p>
+        <p class="card-text"><strong>Pec: </strong>{{cliente.pec}}</p>
+        <p class="card-text"><strong>Email: </strong>{{cliente.email}}</p>
+        <p class="card-text"><strong>Telefono: </strong>{{cliente.telefono}}</p>
+        <p class="card-text"><strong>Indirizzo Sede Operativa: </strong></p>
+        <ul>
+            <li><strong>Via:</strong> {{cliente.indirizzoSedeOperativa.via}} </li>
+            <li><strong>Civico :</strong> {{cliente.indirizzoSedeOperativa.civico}}</li>
+            <li><strong>Cap :</strong> {{cliente.indirizzoSedeOperativa.cap}}</li>
+            <li><strong>Località: </strong> {{cliente.indirizzoSedeOperativa.localita}}</li>
+            <li><strong>Comune :</strong> {{cliente.indirizzoSedeOperativa.comune.nome}}</li>
+            <li><strong>Provincia :</strong> {{cliente.indirizzoSedeOperativa.comune.provincia.nome}}
+                ({{cliente.indirizzoSedeOperativa.comune.provincia.sigla}})</li>
+        </ul>
+
+        <p class="card-text"><strong>Indirizzo Sede Legale:</strong></p>
+        <ul>
+            <li><strong>Via:</strong> {{cliente.indirizzoSedeLegale.via}}</li>
+            <li><strong>Civico :</strong> {{cliente.indirizzoSedeLegale.civico}}</li>
+            <li> <strong>Cap :</strong> {{cliente.indirizzoSedeLegale.cap}}</li>
+            <li><strong>Località :</strong> {{cliente.indirizzoSedeLegale.localita}}</li>
+            <li><strong>Comune :</strong> {{cliente.indirizzoSedeLegale.comune.nome}}</li>
+            <li><strong>Provincia :</strong> {{cliente.indirizzoSedeLegale.comune.provincia.nome}}
+                ({{cliente.indirizzoSedeLegale.comune.provincia.sigla}})</li>
+
+        </ul>
+        <p class="card-text"><strong>Fatturato Annuale: </strong>{{cliente.fatturatoAnnuale}}</p>
+        <p class="card-text"><strong>Data Inserimemnto: </strong>{{cliente.dataInserimento}}</p>
+        <p class="card-text"><strong>Data Ultimo Contatto: </strong>{{cliente.dataUltimoContatto}}</p>
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+       
+        <button class="btn grigio text-white text-uppercase m-2" type="button"(click)="aggiungiFattura(cliente)">Aggiungi Fattura</button>
+        <button class="btn grigio text-white text-uppercase m-2" type="button"(click)="dettagliFattura(cliente)">Dettagli Fatture</button>
+        <button class="btn sfondo text-white m-2" type="button"(click)="ritorna()"><i class="bi bi-backspace"></i></button>
+      </div>
+</div>

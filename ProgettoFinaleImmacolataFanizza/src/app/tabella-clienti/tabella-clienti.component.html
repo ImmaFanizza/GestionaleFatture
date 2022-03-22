@@ -1,0 +1,37 @@
+<div class="table-responsive-lg">
+  <table class="table sfondo text-white shadow-sm p-3 mb-5 bg-body rounded m-auto w-75 table-striped">
+    <thead>
+      <tr class="text-center">
+
+        <th scope="col">Nome</th>
+        <th scope="col">Cognome</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Email</th>
+        <th scope="col">Partita Iva</th>
+        <th scope="col"></th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="text-center" *ngFor="let item of arrayClienti">
+
+        <td>{{item.nomeContatto}}</td>
+        <td>{{item.cognomeContatto}}</td>
+        <td>{{item.telefonoContatto}}</td>
+        <td>{{item.emailContatto}}</td>
+        <td>{{item.partitaIva}}</td>
+
+        <td class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button type="button" class="btn grigio mx-1 btn-sm " (click)="detail(item)"><i
+              class="bi bi-grip-horizontal"></i></button>
+          <button type="button" class="btn grigio btn-sm" (click)="edit(item)"><i
+              class="bi bi-pencil-square"></i></button>
+          <button type="button" class="btn grigio mx-1 btn-sm" (click)="delete(item)"><i
+              class="bi bi-x-lg"></i></button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

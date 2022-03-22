@@ -1,0 +1,154 @@
+<form class="row g-3">
+  <!--Prima row-md-->
+  <div class="col-md-3 my-3 form-group">
+    <label class="form-label">Nome Contatto</label>
+    <input type="text" class="form-control" name="nome" [(ngModel)]="cliente.nomeContatto">
+
+  </div>
+  <div class="col-md-3 my-3 form-group">
+    <label class="form-label">Cognome Contatto </label>
+    <input type="text" class="form-control" name="cognome" [(ngModel)]="cliente.cognomeContatto">
+
+  </div>
+  <div class="col-md-3 my-3 form-group">
+    <label class="form-label">Telefono Contatto</label>
+    <input type="text" class="form-control" name="telefono" [(ngModel)]="cliente.telefonoContatto">
+
+  </div>
+  <div class="col-md-3 my-3 form-group">
+    <label class="form-label">Email Contatto</label>
+    <input type="text" class="form-control" name="email" [(ngModel)]="cliente.emailContatto">
+
+  </div>
+
+  <!--Seconda row-md-->
+  <div class="col-md-3 my-3  form-group">
+    <label class="form-label">Partita Iva</label>
+    <input type="text" class="form-control" name="partitaIva" [(ngModel)]="cliente.partitaIva">
+
+  </div>
+  <div class="col-md-3 my-3 form-group">
+    <label class="form-label">Tipo Cliente</label>
+    <select type="text" class="form-control" name="tipoCliente" [(ngModel)]="cliente.tipoCliente">
+      <option>Seleziona tipo</option>
+      <option [ngValue]="item" *ngFor="let item of tipoCliente">{{item}}</option>
+    </select>
+
+  </div>
+  <div class="col-md-3 my-3 form-group">
+    <label class="form-label">Ragione sociale</label>
+    <input type="text" class="form-control" name="ragioneSociale" [(ngModel)]="cliente.ragioneSociale">
+
+  </div>
+  <div class="col-md-3  my-3 form-group">
+    <label class="form-label">Pec</label>
+    <input type="text" class="form-control" name="pec" [(ngModel)]="cliente.pec">
+
+  </div>
+  <!--Terza row-md-->
+  <div class="col-md-3  my-3 form-group">
+    <label class="form-label">Email</label>
+    <input type="text" class="form-control" name="email" [(ngModel)]="cliente.email">
+  </div>
+
+  <div class="col-md-3 my-3 form-group">
+    <label class="form-label">Telefono</label>
+    <input type="text" class="form-control" name="telefono" [(ngModel)]="cliente.telefono">
+
+  </div>
+
+  <div class="col-md-3 my-3 form-group">
+    <label class="form-label mx-1">Data Inserimento</label>
+    <input type="datetime-local" class="form-control"name="dataInserimento" [(ngModel)]="cliente.dataInserimento">
+
+  </div>
+  <div class="col-md-3  my-3 form-group">
+    <label class="form-label mx-1">Ultimo Contatto </label>
+    <input type="datetime-local" class="form-control" name="dataUltimoContatto" [(ngModel)]="cliente.dataUltimoContatto">
+
+  </div>
+  <!--Quarta row-md-->
+  <div class="col-md-12 mt-4">
+    <h3>Sede Operativa :</h3>
+  </div>
+  <!--Quinta row-md-->
+  <div class="col-md-3  my-4 form-group">
+    <label class="form-label mx-1">Via </label>
+    <input type="text" class="form-control" name="via" [(ngModel)]="cliente.indirizzoSedeOperativa.via">
+  </div>
+  <div class="col-md-3 my-4 form-group">
+    <label class="form-label mx-1">Civico </label>
+    <input type="text" class="form-control" name="civico" [(ngModel)]="cliente.indirizzoSedeOperativa.civico">
+  </div>
+  <div class="col-md-3  my-4 form-group">
+    <label class="form-label">Località</label>
+    <input type="text" class="form-control" name="localita" [(ngModel)]="cliente.indirizzoSedeOperativa.localita">
+  </div>
+  <div class="col-md-3  my-4 form-group">
+    <label class="form-label">Cap </label>
+    <input type="text" class="form-control" name="dataUltimoContatto" [(ngModel)]="cliente.indirizzoSedeOperativa.cap">
+  </div>
+  <!--Sesta row-md-->
+  <div class="col-md-3  my-4 form-group">
+    <label class="form-label ">Comune </label>
+    <select type="text" class="form-control" [(ngModel)]="cliente.indirizzoSedeOperativa.comune"
+      name="nome_comune_SedeOperativa">
+      <option [ngValue]="item" *ngFor="let item of arrayComune">{{item.nome}}</option>
+    </select>
+    <div>
+
+      <fieldset> Per aggiunger un nuovo Comune clicca qui <button class=" btn sfondo text-white-50 btn-sm  mx-1"
+          (click)="aggiungiSede()"><i class="bi bi-signpost-2"></i></button></fieldset>
+
+
+    </div>
+  </div>
+
+  <div class="col-md-9 form-group"></div>
+  <!--Settima row-md-->
+  <div class="col-sm-12">
+    <h3>Sede Legale :</h3>
+  </div>
+  <!--Ottava row-md-->
+  <div class="col-md-3  my-4 form-group">
+    <label class="form-label mx-1">Via </label>
+    <input type="text" class="form-control" name="indirizzo" [(ngModel)]="cliente.indirizzoSedeLegale.via">
+  </div>
+  <div class="col-md-3 my-4 form-group">
+    <label class="form-label mx-1">Civico </label>
+    <input type="text" class="form-control" name="civico" [(ngModel)]="cliente.indirizzoSedeLegale.civico">
+  </div>
+  <div class="col-md-3  my-4 form-group">
+    <label class="form-label">Località</label>
+    <input type="text" class="form-control" name="indirizzo" [(ngModel)]="cliente.indirizzoSedeLegale.localita">
+  </div>
+  <div class="col-md-3  my-4 form-group">
+    <label class="form-label">Cap </label>
+    <input type="text" class="form-control" name="cap" [(ngModel)]="cliente.indirizzoSedeLegale.cap">
+  </div>
+  <!--Nona row-md-->
+  <div class="col-md-3  my-4 form-group">
+    <label class="form-label">Comune </label>
+    <select class="form-control" [(ngModel)]="cliente.indirizzoSedeLegale.comune" name="comune">
+      <option [ngValue]="item" *ngFor="let item of arrayComune">{{item.nome}}</option>
+    </select>
+    <div>
+      <fieldset> Per aggiunger un nuovo Comune clicca qui <button class=" btn sfondo text-white-50 btn-sm mx-1"
+          (click)="aggiungiSede()"><i class="bi bi-signpost-2"></i></button></fieldset>
+
+    </div>
+  </div>
+  <div class="col-md-9 my form-group"></div>
+
+  <!--Decima row-md-->
+  <div class="col-sm-12 my-3 form-group">
+    <button class="btn sfondo text-white w-100 text-uppercase" (click)="create()" type="button">Aggiungi</button>
+
+  </div>
+</form>
+
+
+
+     
+
+      

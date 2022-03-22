@@ -1,0 +1,13 @@
+<div class="card sfondo text-white mb-3 m-auto" style="max-width: 18rem;">
+  <div class="card-header"><strong>Numero : </strong>{{fattura.numero}}</div>
+  <div class="card-body text-white">
+    <p class="card-title"><strong>Data : </strong>{{fattura.data|date}}</p>
+    <p><strong>Anno : </strong>{{fattura.anno}} </p>
+    <p><strong>Importo : </strong>{{fattura.importo}} </p>
+    <p><strong>Nome Cliente : </strong>{{fattura.cliente.nomeContatto}} </p>
+    <p><strong>Cognome Cliente : </strong>{{fattura.cliente.cognomeContatto}} </p>
+    <p><strong>Stato : </strong>{{fattura.stato.nome}} </p>
+    <button type="button" class="btn grigio text-white text-uppercase" (click)="modifica(fattura)">Modifica</button>
+    <button class="btn sfondo text-white m-2" type="button" (click)="ritornaTabella()"><i
+        class="bi bi-backspace"></i></button>
+  </div>
