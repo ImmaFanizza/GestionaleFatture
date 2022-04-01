@@ -12,7 +12,7 @@ export class HttpInterceptorInterceptor implements HttpInterceptor {
   tenantID = 'fe_0621';
   
   
-  bearerToken = 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY0NzkzODEzNywiZXhwIjoxNjQ4ODAyMTM3fQ.34Oe_rK3N5Cow65PqhwRGO7vUhPW8qiNF_Kv8PIHBRErwz-E-va5d17Gx4kBuJcw7lI8A8CRxlHY8B9GTU_DAA'
+  bearerToken = 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY0ODgwMzcyMSwiZXhwIjoxNjQ5NjY3NzIxfQ.BG5yTDCc4NLN3-LAENxUkKB6wZO6KTFQSJ6fnWRmLPvSB6RihRXHAl-DIhjMS8yBvQBT2pOE_d6a0vpaYK06oQ'
 
   constructor() { }
 
