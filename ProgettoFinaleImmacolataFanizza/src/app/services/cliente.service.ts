@@ -16,7 +16,7 @@ export class ClienteService {
 
 
 
-  urlClienti = "api/clienti?page=0&size=20&sort=id,DESC";
+  urlClienti = "api/clienti?page=0&size=20&sort=id,ASC";
   urlModificaClienti = "api/clienti/";
 
   urlComuni = 'api/comuni?page=0&size=20&sort=id,DESC';
